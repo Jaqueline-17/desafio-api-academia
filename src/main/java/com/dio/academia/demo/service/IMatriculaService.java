@@ -3,10 +3,11 @@ package com.dio.academia.demo.service;
 import java.util.List;
 
 import com.dio.academia.demo.entity.Matricula;
+import com.dio.academia.demo.entity.dto.MatriculaDto;
 
 public interface IMatriculaService {
 
-    Matricula create(MatriculaForm form);
+    Matricula create(MatriculaDto form);
 
     Matricula get(Long id);
 

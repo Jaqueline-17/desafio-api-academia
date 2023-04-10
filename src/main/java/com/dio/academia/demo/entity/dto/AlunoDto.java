@@ -20,7 +20,6 @@ public class AlunoDto {
   private String nome;
 
   @NotEmpty(message = "Preencha o campo corretamente.")
-  //@CPF(message = "'${validatedValue}' é inválido!")
   private String cpf;
 
   @NotEmpty(message = "Preencha o campo corretamente.")

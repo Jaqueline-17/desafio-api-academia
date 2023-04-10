@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dio.academia.demo.entity.Aluno;
+import com.dio.academia.demo.entity.AvaliacaoFisica;
 import com.dio.academia.demo.entity.dto.AlunoDto;
 import com.dio.academia.demo.service.impl.AlunoServiceImpl;
 
@@ -22,7 +24,7 @@ public class AlunoController {
 
     @GetMapping
     public List<Aluno> getAll() {
-        return service.getAll();
+        return service.getAll(null);
     }
 
     @PostMapping
@@ -30,6 +32,10 @@ public class AlunoController {
         return service.create(aluno);
     }
 
+    @GetMapping("/avaliacoes/{id}")
+    public List<AvaliacaoFisica> getAvaliacaoId(@PathVariable Long id) {
+        return service.getAvaliacaoFisicaId(id);
+    }
     
 
     

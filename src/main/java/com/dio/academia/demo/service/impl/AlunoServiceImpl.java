@@ -28,23 +28,33 @@ public class AlunoServiceImpl implements IAlunoService {
         return repository.save(aluno);
     }
 
+    @Override
+    public List<AvaliacaoFisica> getAvaliacaoFisicaId(Long id) {
+        Aluno aluno = repository.findById(id).get();
+        return aluno.getAvaliacoes();
+
+    }
+    @Override
     public Aluno get(Long id) {
-
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'get'");
     }
 
+    @Override
     public List<Aluno> getAll(String dataDeNascimento) {
-        return repository.findAll();
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
     }
 
+    @Override
     public Aluno update(Long id, AlunoUpdateDto formUpdate) {
-
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
+    @Override
     public void delete(Long id) {
-
-    }
-
-    public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
-
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
 }
